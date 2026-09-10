@@ -318,6 +318,10 @@ h2{font-size:clamp(30px,5vw,54px)}
 .prose{max-width:68ch;display:grid;gap:20px}
 .prose p{color:var(--mute)}
 .prose h3{font-size:clamp(21px,3vw,28px);margin-top:14px}
+/* Service pages wrap each block in a div, which made it a single grid child —
+   its heading and paragraphs collapsed together. Space them as their own stack. */
+.prose>div{display:grid;gap:16px}
+.prose>div>h3{margin-top:0}
 .prose ul{margin:0;padding:0;list-style:none;display:grid;gap:11px}
 .prose li{color:var(--mute);display:flex;gap:12px;font-size:16px}
 .prose li::before{content:"";width:4px;height:4px;border-radius:50%;background:var(--chrome-3);margin-top:11px;flex:none}
